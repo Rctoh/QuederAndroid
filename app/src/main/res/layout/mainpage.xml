@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Start of Parent Constraint-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Start of Top Part-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/MPtopLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/MPnavBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="31dp"
+                    android:background="@color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_vector" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MPprofilePicCV"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/MPprofilePicIV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/default_profile_picture" />
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/MPnotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="17dp"
+                    android:elevation="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_dot" />
+
+
+                <TextView
+                    android:id="@+id/MPwelcomeTextTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="84dp"
+                    android:fontFamily="@font/cera_pro_regular"
+                    android:text="Good Morning 👋"
+                    android:textColor="@color/GraySubText"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/MPgreetTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:text="Default Name"
+                    android:textColor="@color/PrimaryPurple"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/MPwelcomeTextTV" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/MPsearchBar"
+                    android:layout_width="251dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="23dp"
+                    android:background="@drawable/search_bar"
+                    android:backgroundTint="@color/antiflashwhite"
+                    android:inputType="text"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/MPgreetTV"
+                    app:queryBackground="@color/transparent"
+                    app:queryHint="Search for a clinic">
+
+                </androidx.appcompat.widget.SearchView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MPsearchRecyclerCardCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/MPsearchBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardBackgroundColor="@color/antiflashwhite"
+                    android:outlineAmbientShadowColor="@color/transparent"
+                    android:outlineSpotShadowColor="@color/transparent"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/MPsearchRecyclerRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            />
+
+                        <TextView
+                            android:id="@+id/MPnoClinicTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:visibility="gone"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageButton
+                    android:id="@+id/filterIcon"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/options_icon_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/MPsearchBar"
+                    app:srcCompat="@drawable/ic_options_icon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--End of Top Part-->
+
+            <!--Start of queue details summary card view-->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/MPqueueSummaryMCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/antiflashwhite"
+                android:outlineAmbientShadowColor="@color/transparent"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MPtopLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/MPlocationIV"
+                        android:layout_width="12dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_location_colored"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:id="@+id/MPqueueSummaryNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/MPlocationIV"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="6dp"
+                        android:lineSpacingExtra="2sp"
+                        android:translationY="-1sp"
+                        android:gravity="top"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.01"
+                        android:textColor="#444444"
+                        android:fontFamily="@font/cera_pro_medium"/>
+                    
+                    <TextView
+                        android:id="@+id/MPlocationHeaderTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:layout_constraintTop_toBottomOf="@id/MPqueueSummaryNameTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginStart="28dp"
+                        android:lineSpacingExtra="2sp"
+                        android:translationY="-0.93sp"
+                        android:gravity="top"
+                        android:textSize="13sp"
+                        android:letterSpacing="0.01"
+                        android:textColor="#444444"
+                        android:text="Location:"/>
+
+                    <TextView
+                        android:id="@+id/MPqueueSummaryAddressTV"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/MPqueueSummaryNameTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginStart="100dp"
+                        android:lineSpacingExtra="2sp"
+                        android:translationY="-0.93sp"
+                        android:gravity="top"
+                        android:textSize="13sp"
+                        android:letterSpacing="0.01"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:id="@+id/MPdoctorHeaderTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:layout_constraintTop_toBottomOf="@id/MPqueueSummaryAddressTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="28dp"
+                        android:lineSpacingExtra="2sp"
+                        android:translationY="-0.93sp"
+                        android:gravity="top"
+                        android:textSize="13sp"
+                        android:letterSpacing="0.01"
+                        android:textColor="#444444"
+                        android:text="Doctor:"/>
+
+                    <TextView
+                        android:id="@+id/MPdoctorTextTV"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/MPqueueSummaryAddressTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="100dp"
+                        android:lineSpacingExtra="2sp"
+                        android:translationY="-0.93sp"
+                        android:gravity="top"
+                        android:textSize="13sp"
+                        android:letterSpacing="0.01"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:id="@+id/MPqueueNumberHeaderTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/MPdoctorTextTV"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal|top"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:text="Your Queue Number"/>
+
+                    <TextView
+                        android:id="@+id/MPqueueNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/MPqueueNumberHeaderTV"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center_horizontal|top"
+                        android:textColor="#585CE5"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/mulish_bold" />
+
+                    <ImageView
+                        android:id="@+id/MPrightArrowIV"
+                        android:layout_width="12dp"
+                        android:layout_height="21dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="8dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--End of queue details summary card view-->
+
+            <TextView
+                android:id="@+id/MPnearTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="Nearest to you"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MPqueueSummaryMCV" />
+
+
+            <LinearLayout
+                android:id="@+id/MPNearRecyclerLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="70dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MPnearTV"
+                app:layout_constraintVertical_bias="0.586">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MPnearRecyclerRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/MPmainTrendingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="Trending"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MPNearRecyclerLL" />
+
+            <LinearLayout
+                android:id="@+id/MPtrendingRecyclerLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="70dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MPmainTrendingTV">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MPtrendingRecyclerRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--End of Parent Constraint-->
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/my_navigation_items"
+        android:translationZ="10dp"
+        />-->
+
+    <!--<com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp"
+        tools:ignore="BottomAppBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/MPhoneButtonIB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_home_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/MPsearchButtonIB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_search_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/MPhoneButtonIB"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/MPaddNewButtonIB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_add_new_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/MPsaveButtonIB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/transparent"
+                android:outlineAmbientShadowColor="@color/transparent"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:src="@drawable/ic_save_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/MPaddNewButtonIB"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/MPeditButtonIB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="29dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_edit_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+</RelativeLayout>
+
+
+    <!--End of Parent-->

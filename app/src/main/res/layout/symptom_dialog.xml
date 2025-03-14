@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/SDtopTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/dmsans_medium"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:text="What brings you in today?"/> <!--Top Text-->
+
+        <TextView
+            android:id="@+id/ADsubTextTV"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SDtopTextTV"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="16sp"
+            android:textColor="@color/SubText"
+            android:text="Please share with us your symptoms to your best ability for the best clinic experience. These information are only visible to doctors and not clinic staffs"
+            android:textAlignment="center"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/> <!--Sub Text-->
+
+
+        <TextView
+            android:id="@+id/SDsymptomTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ADsubTextTV"
+            app:layout_constraintStart_toStartOf="@id/SDsymptomCV"
+            android:layout_marginTop="40dp"
+            android:text="Symptoms: (Required)"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="15sp"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/>
+
+
+        <!--First Name-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/SDsymptomCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SDsymptomTV"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/SDsymptomET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="E.g. Migraine, Fever, Diarrhoea"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/SDcommentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/SDsymptomCV"
+            app:layout_constraintStart_toStartOf="@id/SDsymptomCV"
+            android:layout_marginTop="20dp"
+            android:text="Other Comments: (Optional)"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="15sp"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/SDcommentCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SDcommentTV"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/SDcommentET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="E.g. Eaten raw seafood for dinner the day before, symptom started at 10pm"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/SDtravelledRecentlyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/SDcommentCV"
+            app:layout_constraintStart_toStartOf="@id/SDcommentCV"
+            android:layout_marginTop="20dp"
+            android:text="Did you travel recently?"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="15sp"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/>
+
+        <CheckBox
+            android:id="@+id/SDtravelledRecentlyCB"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@id/SDtravelledRecentlyTV"
+            app:layout_constraintBottom_toBottomOf="@id/SDtravelledRecentlyTV"
+            app:layout_constraintStart_toEndOf="@id/SDtravelledRecentlyTV"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
+            android:buttonTint="@color/PrimaryPurple"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/SDtravelledRecentlyCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SDtravelledRecentlyTV"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/SDtravelledRecentlyET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="E.g. Bali, Indonesia"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SDsubmitMB"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SDtravelledRecentlyCV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/PrimaryPurple"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_semibold"
+            android:textSize="16sp"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetTop="0dp"
+            android:shadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:outlineAmbientShadowColor="@color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".QueueDetails"
+    android:background="@color/antiflashwhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/antiflashwhite">
+
+    <ImageView
+        android:id="@+id/QDbackIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="31dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back_arrow"/>
+
+    <TextView
+        android:id="@+id/QDqueueDetailsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/QDbackIV"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/dmsans_bold"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="Queue Details"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/QDcardView1CV"
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/QDqueueDetailsTV"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/QDqueueDetailsHeaderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/HeaderText"
+                android:textSize="18sp"
+                android:text="Your Queue Number"/>
+
+            <TextView
+                android:id="@+id/QDqueueNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/QDqueueDetailsHeaderTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/PrimaryPurple"
+                android:textSize="32sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/QDqueueDetailsCV"
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/QDqueueNumberTV"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardBackgroundColor="@color/antiflashwhite"
+                app:cardCornerRadius="15dp"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:outlineAmbientShadowColor="@color/transparent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/QDqueueHeaderTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:textSize="14sp"
+                        android:textColor="#A1A1A1"
+                        android:text="Current Queue Status for:"/>
+
+                    <TextView
+                        android:id="@+id/QDclinicNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/QDqueueHeaderTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/HeaderText"
+                        />
+
+                    <TextView
+                        android:id="@+id/QDqueueCountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toBottomOf="@id/QDclinicNameTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:textSize="24sp"
+                        android:textColor="#A1A1A1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:layout_constraintTop_toBottomOf="@id/QDqueueCountTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:textSize="14sp"
+                        android:textColor="#A1A1A1"
+                        android:text="Patients ahead of you"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/QDinformationAccurateTV"
+                android:layout_width="233dp"
+                android:layout_height="28dp"
+                app:layout_constraintTop_toBottomOf="@id/QDqueueDetailsCV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/mulish_medium"
+                android:textColor="#A1A1A1"
+                android:textSize="11sp"
+                android:textAlignment="center"
+                android:text="Information accurate as of 09/10/22 1230hrs (Queue Status automatically updates)"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/QDlinearLayoutLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/QDcardView1CV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:background="@color/antiflashwhite">
+
+        <!--QuicK Check In Collapsed (Visible by default)-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/QDquickCheckInCollapsedCV"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Quick check in"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/QDquickCheckInMoreIV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_drop_down_list"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--QuicK Check In Full (Gone by default)-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/QDquickCheckInFullCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/QDquickCheckInHeaderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Quick check in"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="19dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/QDquickCheckInCloseIV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_drop_down_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleY="-1"
+                    />
+                
+                <TextView
+                    android:id="@+id/QDquickCheckInTV"
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDquickCheckInHeaderTV"
+                    android:layout_marginTop="40dp"
+                    android:text="Show this QR code to the clinic staff for a quick and easy registration process"
+                    android:textColor="#A1A1A1"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textSize="14sp"
+                    android:textAlignment="center"/>
+
+                <ImageView
+                    android:id="@+id/QDquickCheckInQRcodeIV"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDquickCheckInTV"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/QDqrTextTV"
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDquickCheckInQRcodeIV"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mulish_medium"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="-30dp"
+                    android:paddingBottom="50dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/QDcheckedInIV"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDquickCheckInTV"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_green_tick_check_in"
+                    android:visibility="gone"
+                    />
+
+
+                <TextView
+                    android:id="@+id/QDcheckedInNoteTV"
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDcheckedInIV"
+                    android:text="Queue number may not be called in sequence. Please be patient!"
+                    android:textColor="#A1A1A1"
+                    android:fontFamily="@font/mulish_medium"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="30dp"
+                    android:paddingBottom="30dp"
+                    android:visibility="gone"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Clinic Details Collapsed (Visible by default)-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/QDclinicDetailsCollapsedCV"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:text="Clinic Details"
+                    android:textColor="#A1A1A1"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4sp"/>
+
+                <ImageView
+                    android:id="@+id/QDclinicDetailsMoreIV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/ic_drop_down_list"
+                    android:scaleType="center"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Clinic Details Full (Gone by default)-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/QDclinicDetailsFullCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/QDclinicDetailsHeaderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Clinic Details"
+                    android:textColor="#A1A1A1"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4sp"/>
+
+                <ImageView
+                    android:id="@+id/QDclinicDetailsCloseIV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/ic_drop_down_list"
+                    android:scaleType="center"
+                    android:scaleY="-1"/>
+
+                <!-- Name Header -->
+                <TextView
+                    android:id="@+id/QDclinicNameHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicDetailsHeaderTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Clinic Name:"
+                    />
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/QDclinicNameCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicNameHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                     />
+
+                <!-- Address Header -->
+                <TextView
+                    android:id="@+id/QDclinicAddressHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicNameCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Clinic Address:"
+                    />
+
+                <!-- Address -->
+                <TextView
+                    android:id="@+id/QDclinicAddressCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicAddressHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+
+                <!-- Opening hours Header -->
+                <TextView
+                    android:id="@+id/QDclinicOpeningHoursHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicAddressCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Opening Hours:"
+                    />
+
+                <!-- Opening hours -->
+                <TextView
+                    android:id="@+id/QDclinicOpeningHoursCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicOpeningHoursHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+
+                <!-- Contact Number Header -->
+                <TextView
+                    android:id="@+id/QDclinicContactHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicOpeningHoursCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Contact Number:"
+                    />
+
+                <!-- Contact Number -->
+                <TextView
+                    android:id="@+id/QDclinicContactCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicContactHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+
+                <!-- Doctor In Today Header -->
+                <TextView
+                    android:id="@+id/QDdoctorInTodayHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicContactCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Doctor In Today:"
+                    />
+
+                <!-- Doctor In Today -->
+                <TextView
+                    android:id="@+id/QDdoctorInTodayCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDdoctorInTodayHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+
+                <!-- Clinic Type Header -->
+                <TextView
+                    android:id="@+id/QDclinicTypeHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDdoctorInTodayCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Clinic Type:"
+                    />
+
+                <!-- Clinic Type -->
+                <TextView
+                    android:id="@+id/QDclinicTypeCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicTypeHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+
+                <!-- Clinic Programmes Header -->
+                <TextView
+                    android:id="@+id/QDclinicProgrammeHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicTypeCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Clinic Programme:"
+                    />
+
+                <!-- Clinic Programmes -->
+                <TextView
+                    android:id="@+id/QDclinicProgrammeCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicProgrammeHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+
+                <!-- Clinic Payment Method Header  -->
+                <TextView
+                    android:id="@+id/QDpaymentHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicProgrammeCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Available Payment Method(s):"
+                    />
+
+                <!-- Clinic Payment Method -->
+                <TextView
+                    android:id="@+id/QDpaymentCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDpaymentHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+                <!-- Public Transport Header -->
+                <TextView
+                    android:id="@+id/QDpublicTransportHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDpaymentCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Available Public Transport (\u003C5 min walk):"
+                    />
+
+                <!-- Public Transport -->
+                <TextView
+                    android:id="@+id/QDpublicTransportCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDpublicTransportHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+                <!-- Carpark Header  -->
+                <TextView
+                    android:id="@+id/QDcarparkHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDpublicTransportCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Carpark nearby? (\u003C5 min walk):"
+                    />
+
+                <!-- Carpark -->
+                <TextView
+                    android:id="@+id/QDcarparkCardTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDcarparkHeaderCardTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+                <!-- Clinic Rating Header  -->
+                <TextView
+                    android:id="@+id/QDclinicRatingHeaderCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDcarparkCardTV"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="@color/HeaderText"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.02"
+                    android:text="Clinic Rating:"
+                    />
+
+                <!-- Clinic Rating  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/QDclinicRatingHeaderCardTV"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/QDclinicRatingCardTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:textColor="#A1A1A1"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star"
+                        android:layout_marginStart="3dp"
+                        android:layout_gravity="center_vertical"/>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/QDcancelQueueMB"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintTop_toBottomOf="@id/QDlinearLayoutLL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        app:cornerRadius="16dp"
+        android:text="Cancel Queue Number"
+        android:textAllCaps="false"
+        android:fontFamily="@font/mulish_semibold"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="2sp"
+        android:backgroundTint="@color/BurgandyRed"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

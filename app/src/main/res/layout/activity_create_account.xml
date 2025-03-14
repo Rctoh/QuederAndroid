@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CreateAccount"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+        android:id="@+id/CAtopTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/dmsans_medium"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:text="Getting Started!"/> <!--Top Text-->
+
+        <TextView
+            android:id="@+id/CAsubTextTV"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CAtopTextTV"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="16sp"
+            android:textColor="@color/SubText"
+            android:text="Look like you are new to us! Create an account for a complete experience."
+            android:textAlignment="center"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/> <!--Sub Text-->
+
+
+        <!--First Name-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CAfirstNameCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CAsubTextTV"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/CAfirstNameET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="First Name"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Full Name-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CAfullNameCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CAfirstNameCV"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/CAfullNameET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="Full Name (As per NRIC)"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--NRIC-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CAnricCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CAfullNameCV"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/CAnricET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="NRIC"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Email-->
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CAemailMCV"
+        android:layout_width="310dp"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CAnricCV"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#EAEAEF"
+        app:strokeWidth="1dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+
+        <EditText
+            android:id="@+id/CAemailET"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:background="@color/transparent"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="14sp"
+            android:textColorHint="@color/SubText"
+            android:hint="Email"
+            android:textColor="@color/black"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <!--Phone Number-->
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CAphoneNumberMCV"
+        android:layout_width="310dp"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CAemailMCV"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#EAEAEF"
+        app:strokeWidth="1dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/CAphoneNumberExtS"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:dropDownWidth="70dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_seperator_icon"/>
+
+            <EditText
+                android:id="@+id/CAphoneNumberET"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="Phone Number"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <!--Password-->
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CApasswordMCV"
+        android:layout_width="310dp"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CAphoneNumberMCV"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#EAEAEF"
+        app:strokeWidth="1dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/CApasswordET"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="Password"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                />
+
+            <ImageView
+                android:id="@+id/CAshowPasswordIV"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_visible_false"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <!--Re-enter Password-->
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CArePasswordMCV"
+        android:layout_width="310dp"
+        android:layout_height="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CApasswordMCV"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#EAEAEF"
+        app:strokeWidth="1dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/CArePasswordET"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="Re-enter Password"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                />
+
+            <ImageView
+                android:id="@+id/CAshowRePasswordIV"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_visible_false"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <!--Submit Button-->
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/CAcreateButtonMB"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CArePasswordMCV"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="@color/PrimaryPurple"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_semibold"
+        android:textSize="16sp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        android:shadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:outlineAmbientShadowColor="@color/transparent"/>
+
+        <ProgressBar
+            android:id="@+id/CAprogressBarPB"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CArePasswordMCV"
+            android:layout_marginTop="40dp"
+            android:visibility="invisible"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

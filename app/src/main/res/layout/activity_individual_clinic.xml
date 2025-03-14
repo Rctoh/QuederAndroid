@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".IndividualClinic"
+    android:background="@color/antiflashwhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/antiflashwhite">
+
+        <ImageView
+        android:id="@+id/ICbackIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="31dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back_arrow"/>
+
+        <TextView
+        android:id="@+id/ICclinicDetailsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ICbackIV"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/dmsans_bold"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="Clinic Details"/>
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/ICimageCV"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ICclinicDetailsTV"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="10dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+    
+        <ImageView
+            android:id="@+id/ICimageIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ICcardView1CV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ICimageCV"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ICclinicNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/HeaderText"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ICaddressTV"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicNameTV"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish_medium"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/ICdoctorHeaderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                app:layout_constraintTop_toBottomOf="@id/ICaddressTV"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/mulish_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="Doctor:"/>
+
+            <TextView
+                android:id="@+id/ICdoctorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                app:layout_constraintTop_toBottomOf="@id/ICaddressTV"
+                app:layout_constraintStart_toEndOf="@id/ICdoctorHeaderTV"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/mulish_medium"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+            
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICdoctorTV"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardBackgroundColor="@color/antiflashwhite"
+                app:cardCornerRadius="15dp"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:outlineAmbientShadowColor="@color/transparent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ICqueueCountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:text="Patients ahead of you"
+                        android:textColor="#A1A1A1"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ICqueueCountTV" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                
+                
+            </com.google.android.material.card.MaterialCardView>
+            
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/ICgetQueueMB"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintTop_toBottomOf="@id/ICcardView1CV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="16dp"
+        android:text="Get queue number"
+        android:textAllCaps="false"
+        android:fontFamily="@font/mulish_regular"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="2sp"
+        android:backgroundTint="@color/PrimaryPurple"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        />
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/ICclinicDetailsCollapsedCV"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ICgetQueueMB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="15dp"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:outlineAmbientShadowColor="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:text="Clinic Details"
+                android:textColor="#A1A1A1"
+                android:fontFamily="@font/mulish_semibold"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4sp"/>
+
+            <ImageView
+                android:id="@+id/ICclinicDetailsMoreIV"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_drop_down_list"
+                android:scaleType="center"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <!--Clinic Details Full (Gone by default)-->
+        <androidx.cardview.widget.CardView
+        android:id="@+id/ICclinicDetailsFullCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="15dp"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:outlineAmbientShadowColor="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/ICgetQueueMB"
+        app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ICclinicDetailsHeaderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Clinic Details"
+                android:textColor="#A1A1A1"
+                android:fontFamily="@font/mulish_semibold"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4sp"/>
+
+            <ImageView
+                android:id="@+id/ICclinicDetailsCloseIV"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_drop_down_list"
+                android:scaleType="center"
+                android:scaleY="-1"/>
+
+            <!-- Name Header -->
+            <TextView
+                android:id="@+id/ICclinicNameHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicDetailsHeaderTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Clinic Name:"
+                />
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/ICclinicNameCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicNameHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+            <!-- Address Header -->
+            <TextView
+                android:id="@+id/ICclinicAddressHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicNameCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Clinic Address:"
+                />
+
+            <!-- Address -->
+            <TextView
+                android:id="@+id/ICclinicAddressCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicAddressHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+
+            <!-- Opening hours Header -->
+            <TextView
+                android:id="@+id/ICclinicOpeningHoursHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicAddressCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Opening Hours:"
+                />
+
+            <!-- Opening hours -->
+            <TextView
+                android:id="@+id/ICclinicOpeningHoursCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicOpeningHoursHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+
+            <!-- Contact Number Header -->
+            <TextView
+                android:id="@+id/ICclinicContactHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicOpeningHoursCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Contact Number:"
+                />
+
+            <!-- Contact Number -->
+            <TextView
+                android:id="@+id/ICclinicContactCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicContactHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+
+            <!-- Doctor In Today Header -->
+            <TextView
+                android:id="@+id/ICdoctorInTodayHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicContactCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Doctor In Today:"
+                />
+
+            <!-- Doctor In Today -->
+            <TextView
+                android:id="@+id/ICdoctorInTodayCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICdoctorInTodayHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+
+            <!-- Clinic Type Header -->
+            <TextView
+                android:id="@+id/ICclinicTypeHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICdoctorInTodayCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Clinic Type:"
+                />
+
+            <!-- Clinic Type -->
+            <TextView
+                android:id="@+id/ICclinicTypeCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicTypeHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+
+            <!-- Clinic Programmes Header -->
+            <TextView
+                android:id="@+id/ICclinicProgrammeHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicTypeCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Clinic Programme:"
+                />
+
+            <!-- Clinic Programmes -->
+            <TextView
+                android:id="@+id/ICclinicProgrammeCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicProgrammeHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+
+            <!-- Clinic Payment Method Header  -->
+            <TextView
+                android:id="@+id/ICpaymentHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicProgrammeCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Available Payment Method(s):"
+                />
+
+            <!-- Clinic Payment Method -->
+            <TextView
+                android:id="@+id/ICpaymentCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICpaymentHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+            <!-- Public Transport Header -->
+            <TextView
+                android:id="@+id/ICpublicTransportHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICpaymentCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Available Public Transport (\u003C5 min walk):"
+                />
+
+            <!-- Public Transport -->
+            <TextView
+                android:id="@+id/ICpublicTransportCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICpublicTransportHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+            <!-- Carpark Header  -->
+            <TextView
+                android:id="@+id/ICcarparkHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICpublicTransportCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Carpark nearby? (\u003C5 min walk):"
+                />
+
+            <!-- Carpark -->
+            <TextView
+                android:id="@+id/ICcarparkCardTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICcarparkHeaderCardTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="#A1A1A1"
+                android:textSize="14sp"
+                />
+
+            <!-- Clinic Rating Header  -->
+            <TextView
+                android:id="@+id/ICclinicRatingHeaderCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICcarparkCardTV"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/mulish_semibold"
+                android:textColor="@color/HeaderText"
+                android:textSize="14sp"
+                android:letterSpacing="0.02"
+                android:text="Clinic Rating:"
+                />
+
+            <!-- Clinic Rating  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ICclinicRatingHeaderCardTV"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                >
+
+                <TextView
+                    android:id="@+id/ICclinicRatingCardTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:textColor="#A1A1A1"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_star"
+                    android:layout_marginStart="3dp"
+                    android:layout_gravity="center_vertical"/>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

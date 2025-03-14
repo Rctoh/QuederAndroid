@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Queder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="phoneExtension_array">
+
+        <item>+65</item>
+        <item>+7</item>
+        <item>+20</item>
+        <item>+60</item>
+        <item>+62</item>
+        <item>+63</item>
+        <item>+66</item>
+        <item>+81</item>
+        <item>+82</item>
+        <item>+84</item>
+        <item>+86</item>
+        <item>+91</item>
+        <item>+92</item>
+        <item>+93</item>
+        <item>+94</item>
+        <item>+95</item>
+        <item>+98</item>
+        <item>+246</item>
+        <item>+374</item>
+        <item>+670</item>
+        <item>+673</item>
+        <item>+850</item>
+        <item>+852</item>
+        <item>+853</item>
+        <item>+855</item>
+        <item>+856</item>
+        <item>+880</item>
+        <item>+886</item>
+        <item>+960</item>
+        <item>+961</item>
+        <item>+962</item>
+        <item>+963</item>
+        <item>+964</item>
+        <item>+965</item>
+        <item>+966</item>
+        <item>+967</item>
+        <item>+968</item>
+        <item>+970</item>
+        <item>+971</item>
+        <item>+972</item>
+        <item>+973</item>
+        <item>+974</item>
+        <item>+975</item>
+        <item>+976</item>
+        <item>+977</item>
+        <item>+992</item>
+        <item>+993</item>
+        <item>+994</item>
+        <item>+995</item>
+        <item>+996</item>
+        <item>+998</item>
+
+    </string-array>
+    <string name="title_dynamicfeature">Queder Demo App</string>
+</resources>
+

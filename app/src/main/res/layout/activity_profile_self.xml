@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_self">
+
+    <ImageButton
+        android:id="@+id/PSbackArrowIB"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="31dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@color/transparent"/>
+
+    <TextView
+        android:id="@+id/PSaccountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="26dp"
+        android:text="Account"
+        android:fontFamily="@font/cera_pro_medium"
+        android:textSize="22sp"
+        android:textColor="@color/GraySubText" />
+
+    <TextView
+        android:id="@+id/PSfullNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/PSaccountTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/cera_pro_medium"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/PSemailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/PSfullNameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/cera_pro_regular"
+        android:textSize="14sp"
+        android:textColor="@color/GraySubText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/PSprofilePicCV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PSaccountTV"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="100dp">
+
+        <ImageView
+            android:id="@+id/PSprofilePicIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_profile_picture"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/PShorizontalSeperator1IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_seperator_horizontal_long"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PSemailTV"
+        android:layout_marginTop="26dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="328dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PShorizontalSeperator1IV">
+
+        <LinearLayout
+            android:id="@+id/PSlikeLL"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_heart_profile"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liked Items"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="6.5dp"
+                android:layout_marginEnd="6.5dp"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="14sp"
+                android:textColor="#636773"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PSnotificationLL"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/PSlikeLL"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="13dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bell_notification"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="14sp"
+                android:textColor="#636773"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PSpublishedLL"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/PSnotificationLL"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="13dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Published"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="14sp"
+                android:textColor="#636773"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/PShorizontalSeperator2IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_seperator_horizontal_long"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PShorizontalSeperator1IV"
+        android:layout_marginTop="90dp"/>
+
+    <LinearLayout
+        android:id="@+id/PSaboutLL"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PShorizontalSeperator2IV"
+        android:layout_marginTop="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="About"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_gravity="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PSeditprofileLL"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PSaboutLL"
+        android:layout_marginTop="26dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Edit Profile"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_gravity="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PSsettingsLL"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PSeditprofileLL"
+        android:layout_marginTop="26dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Settings"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_gravity="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PShelpSupportLL"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PSsettingsLL"
+        android:layout_marginTop="26dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Help &amp; Support"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_gravity="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PSsendFeedbackLL"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PShelpSupportLL"
+        android:layout_marginTop="26dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Send Feedback"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_gravity="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PSlogoutLL"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PSsendFeedbackLL"
+        android:layout_marginTop="26dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Logout"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_gravity="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

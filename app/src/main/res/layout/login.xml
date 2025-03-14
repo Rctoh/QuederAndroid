@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/LlogoIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/ic_logo"/>
+
+    <TextView
+        android:id="@+id/LheaderTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        app:layout_constraintTop_toBottomOf="@id/LlogoIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/dmsans_medium"
+        android:lineHeight="0.36dp"
+        android:text="Let’s Get Started"
+        android:textColor="@color/HeaderText"
+        android:textSize="26sp"
+        android:lineSpacingExtra="2sp"
+        android:letterSpacing="-0.02"
+        android:translationY="1.07sp"
+        android:gravity="center_horizontal|bottom"/>
+
+    <TextView
+        android:id="@+id/LintroTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/LheaderTextTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/mulish_medium"
+        android:lineHeight="28dp"
+        android:text="Sign up or login into to have a full digital experience in the clinic"
+        android:textColor="@color/SubText"
+        android:layout_marginTop="14dp"
+        android:textSize="16sp"
+        android:gravity="center"/>
+    
+    <ImageButton
+        android:id="@+id/LgetStartedIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_get_started"
+        app:layout_constraintTop_toBottomOf="@id/LintroTextTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="56dp"
+        android:background="@color/transparent"/>
+
+    <ImageView
+        android:id="@+id/LorIV"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_or"
+        app:layout_constraintTop_toBottomOf="@id/LgetStartedIB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <ImageButton
+        android:id="@+id/LcontinueSingpassIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/LorIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_continue_singpass"
+        android:background="@color/transparent"
+        android:layout_marginTop="12dp"/>
+
+    <ImageButton
+        android:id="@+id/LcontinueGoogleIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/LcontinueSingpassIB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_continue_gmail"
+        android:background="@color/transparent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/LsignUpLaterTV"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        android:text="FAQ"
+        android:fontFamily="@font/mulish_semibold"
+        android:textSize="16sp"
+        android:textColor="@color/SubText"
+        android:gravity="center"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

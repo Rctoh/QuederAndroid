@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ADtopTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/dmsans_medium"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:text="Hold Up!"/> <!--Top Text-->
+
+        <TextView
+            android:id="@+id/ADsubTextTV"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ADtopTextTV"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="16sp"
+            android:textColor="@color/SubText"
+            android:text="Before getting your first queue number, please let us know if you have any medical allergies or chronic disease \n\n You only have to do this once. \nYou can edit it in settings later"
+            android:textAlignment="center"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/> <!--Sub Text-->
+
+
+        <TextView
+            android:id="@+id/ADallergiesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ADsubTextTV"
+            app:layout_constraintStart_toStartOf="@id/ADallergiesCV"
+            android:layout_marginTop="40dp"
+            android:text="Drug / Medical Allergies: (Optional)"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="15sp"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/>
+
+
+        <!--First Name-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ADallergiesCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ADallergiesTV"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/ADallergiesET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="E.g. Amoxicillin. If none, leave blank"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/ADchronicDiseaseTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ADallergiesCV"
+            app:layout_constraintStart_toStartOf="@id/ADallergiesCV"
+            android:layout_marginTop="20dp"
+            android:text="Chronic Disease: (Optional)"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mulish_medium"
+            android:textSize="15sp"
+            android:lineSpacingExtra="8sp"
+            android:translationY="3.96sp"
+            android:gravity="center_horizontal|bottom"/>
+
+        <!--Full Name-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ADchronicDiseaseCV"
+            android:layout_width="310dp"
+            android:layout_height="54dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ADchronicDiseaseTV"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="#EAEAEF"
+            app:strokeWidth="1dp"
+            android:outlineAmbientShadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent">
+
+            <EditText
+                android:id="@+id/ADchronicDiseaseET"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_medium"
+                android:textSize="14sp"
+                android:textColorHint="@color/SubText"
+                android:hint="E.g. Type 2 diabetes/Hypertension. \nIf none, leave blank"
+                android:textColor="@color/black"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ADsubmitMB"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ADchronicDiseaseCV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/PrimaryPurple"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_semibold"
+            android:textSize="16sp"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetTop="0dp"
+            android:shadowColor="@color/transparent"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:outlineAmbientShadowColor="@color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

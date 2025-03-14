@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+google-services.json
+gradle.properties
+java_pid17760.hprof
+java_pid*.hprof
+
+# Ignore large binary files
+*.hprof
+*.keystore
+*.jks

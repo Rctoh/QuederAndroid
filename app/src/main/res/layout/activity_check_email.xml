@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckEmail"
+    android:background="@color/white">
+
+
+    <ImageButton
+        android:id="@+id/CEbackArrowIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="24dp"/>
+
+    <ImageView
+        android:id="@+id/CEquederLogoIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="90dp"/>
+
+
+    <TextView
+        android:id="@+id/CEheaderTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/CEquederLogoIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/dmsans_medium"
+        android:text="Enter your email"
+        android:textColor="@color/HeaderText"
+        android:lineSpacingExtra="2sp"
+        android:translationY="1.07sp"
+        android:layout_marginTop="45dp"
+        android:textSize="26sp"
+        android:gravity="center_horizontal|bottom"
+        />
+
+    <TextView
+        android:id="@+id/CEintroTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/CEheaderTextTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/dmsans_medium"
+        android:lineHeight="28dp"
+        android:text="We will send you a verification code"
+        android:textColor="@color/SubText"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/CEemailET"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CEintroTextTV"
+        android:layout_marginTop="65dp"
+        android:textAlignment="center"
+        android:hint="John@queder.com"
+        android:textColorHint="@color/GrayHintText"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/dmsans_bold"
+        android:background="@color/transparent"
+        android:defaultFocusHighlightEnabled="false"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/CEcontinueButtonMB"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CEemailET"
+        android:layout_marginTop="65dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="@color/PrimaryPurple"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/dmsans_bold"
+        android:textSize="16sp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        android:shadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:outlineAmbientShadowColor="@color/transparent"/>
+
+    <ProgressBar
+        android:id="@+id/CEprogressBarPB"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CEemailET"
+        android:layout_marginTop="70dp"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/CEcontinueButtonMB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/dmsans_regular"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textColor="@color/SubText"
+        android:text="By clicking on “Continue” you are agreeing to our terms of use"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

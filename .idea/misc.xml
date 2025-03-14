@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/add_icon_bg.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_add.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_back.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_back_arrow.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_bell_notification.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_button.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_dot.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_drop_down_list.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_logo.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_next.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_next_button.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_onboard_2_picture.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_onboard_3_image.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_onboard_3_page.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_onboard_3_picture.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_options_icon.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_or.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_password.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_search_button.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_send.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_send_large.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_separator_horizontal_full.xml" value="0.16" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_singpass.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_wallpaper.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/ic_x.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/options_icon_bg.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/rectangletest.xml" value="0.1625" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/drawable/search_bar.xml" value="0.162" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/activity_check_email.xml" value="0.22" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/activity_create_account.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/activity_individual_clinic.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/activity_queue_details.xml" value="0.22" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/activity_verify_otp.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/all_clinic_recycler.xml" value="0.325" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/login.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/mainpage.xml" value="0.42931547619047616" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/onboard_1.xml" value="0.22" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/onboard_2.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/onboard_3.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/recommendedrecycler.xml" value="0.325" />
+        <entry key="..\:/Users/Ruich/OneDrive - Temasek Polytechnic/Android/Queder/app/src/main/res/layout/trendingrestaurantrecycler.xml" value="0.325" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_back_arrow.xml" value="0.1875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_chevron_right.xml" value="0.1875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_dot.xml" value="0.2685" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_email_icon.xml" value="0.1875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_seperator_icon.xml" value="0.214" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_seperator_vertical_large.xml" value="0.214" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_topdeals.xml" value="0.253" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_visible.xml" value="0.214" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/drawable/ic_visible_false.xml" value="0.214" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/activity_check_email.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/activity_create_account.xml" value="0.21201413427561838" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/activity_main.xml" value="0.325" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/activity_verify_otp.xml" value="0.10989010989010989" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/login.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/mainpage.xml" value="0.325" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Queder/app/src/main/res/layout/maintrendingrecycler.xml" value="0.5873205741626795" />
+        <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.325" />
+        <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.325" />
+        <entry key="..\:/Users/User/Downloads/Queder/app/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/Users/User/Downloads/Queder/app/src/main/res/layout/login.xml" value="0.325" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="jbr-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
